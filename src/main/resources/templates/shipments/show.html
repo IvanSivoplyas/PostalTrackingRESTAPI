@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shipment</title>
+</head>
+<body>
+<p th:text="${shipment.getName()}">VALUE</p>
+<p th:text="${person.getId()}">VALUE</p>
+
+<a th:href="@{/templates/shipments/{id}/edit(id=${person.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/templates/shipments/{id}(id=${person.getId()})}">
+    <input type="submit" value="Delete" />
+</form>
+
+</body>
+</html>
